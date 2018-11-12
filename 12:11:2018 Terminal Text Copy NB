@@ -1,0 +1,835 @@
+Last login: Mon Nov 12 11:09:22 on ttys000
+Nicholass-MacBook-Pro:~ nicholasbarker$ git config --global user.name Knightofnoo
+Nicholass-MacBook-Pro:~ nicholasbarker$ git config --global user.email klauz1979@googlemail.com
+Nicholass-MacBook-Pro:~ nicholasbarker$ git config --global color.ui auto
+Nicholass-MacBook-Pro:~ nicholasbarker$ get config --get user.name
+-bash: get: command not found
+Nicholass-MacBook-Pro:~ nicholasbarker$ git config --get user.name
+Knightofnoo
+Nicholass-MacBook-Pro:~ nicholasbarker$ git config --get user.email
+klauz1979@googlemail.com
+Nicholass-MacBook-Pro:~ nicholasbarker$ ls ~/.ssh/id_rsa.pub
+/Users/nicholasbarker/.ssh/id_rsa.pub
+Nicholass-MacBook-Pro:~ nicholasbarker$ 
+Nicholass-MacBook-Pro:~ nicholasbarker$ ls ~/.ssh/id_rsa.pub
+/Users/nicholasbarker/.ssh/id_rsa.pub
+Nicholass-MacBook-Pro:~ nicholasbarker$ ssh-keygen -C klauz1979@googlemail.com
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/nicholasbarker/.ssh/id_rsa): 
+/Users/nicholasbarker/.ssh/id_rsa already exists.
+Overwrite (y/n)? y
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /Users/nicholasbarker/.ssh/id_rsa.
+Your public key has been saved in /Users/nicholasbarker/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:HTvdFUEDWRlS7Fieg8IJrRLSp2YUAd2S5HqF3ThKNrY klauz1979@googlemail.com
+The key's randomart image is:
++---[RSA 2048]----+
+|     .=+= .  oBO+|
+|     ..Bo+o. ..+o|
+|      oB===.. * o|
+|      ===o.B + * |
+|     .oES + o . .|
+|      .    .     |
+|                 |
+|                 |
+|                 |
++----[SHA256]-----+
+Nicholass-MacBook-Pro:~ nicholasbarker$ cat ~/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDGl5sr4RUA1B+Pkpvm4Kik+rALPhiScrVZSKD963PnVQOTB8RWifkjsaeGwLZ/gmt13l7+Wb9DdH9KW7LR2e/umBvlWFs1WWBQFKC18u4/fsVZOmXk43VSgPeKagIHemW+TMz7PVZJ/ALOnnCl8tHM/Zx6N3hqGx6G7Ia30MBiIcov/VRUYU6XjeWVokaST9aDneitsjQNpV0bw5UIByO1wKb7WXBw3voTu70/j2ZRr14a3MYRxiQOnpJ+j2owI2WRVfheAopC3kd64fkixDYjS/mKa+wg+41l2CxaKN+8fbsReM0ali0vUW2O0oLEtfHQtwpfID2RkfgKq8VMqCq5 klauz1979@googlemail.com
+Nicholass-MacBook-Pro:~ nicholasbarker$ gem install rails
+Successfully installed rails-5.2.1
+Parsing documentation for rails-5.2.1
+Done installing documentation for rails after 0 seconds
+1 gem installed
+Nicholass-MacBook-Pro:~ nicholasbarker$ mkdir odin_on_rails
+Nicholass-MacBook-Pro:~ nicholasbarker$ cd odin_on_rails
+Nicholass-MacBook-Pro:odin_on_rails nicholasbarker$ rails new my_first_rails_app
+      create  
+      create  README.md
+      create  Rakefile
+      create  .ruby-version
+      create  config.ru
+      create  .gitignore
+      create  Gemfile
+         run  git init from "."
+Initialized empty Git repository in /Users/nicholasbarker/odin_on_rails/my_first_rails_app/.git/
+      create  package.json
+      create  app
+      create  app/assets/config/manifest.js
+      create  app/assets/javascripts/application.js
+      create  app/assets/javascripts/cable.js
+      create  app/assets/stylesheets/application.css
+      create  app/channels/application_cable/channel.rb
+      create  app/channels/application_cable/connection.rb
+      create  app/controllers/application_controller.rb
+      create  app/helpers/application_helper.rb
+      create  app/jobs/application_job.rb
+      create  app/mailers/application_mailer.rb
+      create  app/models/application_record.rb
+      create  app/views/layouts/application.html.erb
+      create  app/views/layouts/mailer.html.erb
+      create  app/views/layouts/mailer.text.erb
+      create  app/assets/images/.keep
+      create  app/assets/javascripts/channels
+      create  app/assets/javascripts/channels/.keep
+      create  app/controllers/concerns/.keep
+      create  app/models/concerns/.keep
+      create  bin
+      create  bin/bundle
+      create  bin/rails
+      create  bin/rake
+      create  bin/setup
+      create  bin/update
+      create  bin/yarn
+      create  config
+      create  config/routes.rb
+      create  config/application.rb
+      create  config/environment.rb
+      create  config/cable.yml
+      create  config/puma.rb
+      create  config/spring.rb
+      create  config/storage.yml
+      create  config/environments
+      create  config/environments/development.rb
+      create  config/environments/production.rb
+      create  config/environments/test.rb
+      create  config/initializers
+      create  config/initializers/application_controller_renderer.rb
+      create  config/initializers/assets.rb
+      create  config/initializers/backtrace_silencers.rb
+      create  config/initializers/content_security_policy.rb
+      create  config/initializers/cookies_serializer.rb
+      create  config/initializers/cors.rb
+      create  config/initializers/filter_parameter_logging.rb
+      create  config/initializers/inflections.rb
+      create  config/initializers/mime_types.rb
+      create  config/initializers/new_framework_defaults_5_2.rb
+      create  config/initializers/wrap_parameters.rb
+      create  config/locales
+      create  config/locales/en.yml
+      create  config/master.key
+      append  .gitignore
+      create  config/boot.rb
+      create  config/database.yml
+      create  db
+      create  db/seeds.rb
+      create  lib
+      create  lib/tasks
+      create  lib/tasks/.keep
+      create  lib/assets
+      create  lib/assets/.keep
+      create  log
+      create  log/.keep
+      create  public
+      create  public/404.html
+      create  public/422.html
+      create  public/500.html
+      create  public/apple-touch-icon-precomposed.png
+      create  public/apple-touch-icon.png
+      create  public/favicon.ico
+      create  public/robots.txt
+      create  tmp
+      create  tmp/.keep
+      create  tmp/cache
+      create  tmp/cache/assets
+      create  vendor
+      create  vendor/.keep
+      create  test/fixtures
+      create  test/fixtures/.keep
+      create  test/fixtures/files
+      create  test/fixtures/files/.keep
+      create  test/controllers
+      create  test/controllers/.keep
+      create  test/mailers
+      create  test/mailers/.keep
+      create  test/models
+      create  test/models/.keep
+      create  test/helpers
+      create  test/helpers/.keep
+      create  test/integration
+      create  test/integration/.keep
+      create  test/test_helper.rb
+      create  test/system
+      create  test/system/.keep
+      create  test/application_system_test_case.rb
+      create  storage
+      create  storage/.keep
+      create  tmp/storage
+      create  tmp/storage/.keep
+      remove  config/initializers/cors.rb
+      remove  config/initializers/new_framework_defaults_5_2.rb
+         run  bundle install
+The dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.
+Fetching gem metadata from https://rubygems.org/.........
+Fetching gem metadata from https://rubygems.org/.
+Resolving dependencies...
+Using rake 12.3.1
+Using concurrent-ruby 1.1.3
+Using i18n 1.1.1
+Using minitest 5.11.3
+Using thread_safe 0.3.6
+Using tzinfo 1.2.5
+Using activesupport 5.2.1
+Using builder 3.2.3
+Using erubi 1.7.1
+Using mini_portile2 2.3.0
+Using nokogiri 1.8.5
+Using rails-dom-testing 2.0.3
+Using crass 1.0.4
+Using loofah 2.2.3
+Using rails-html-sanitizer 1.0.4
+Using actionview 5.2.1
+Using rack 2.0.6
+Using rack-test 1.1.0
+Using actionpack 5.2.1
+Using nio4r 2.3.1
+Using websocket-extensions 0.1.3
+Using websocket-driver 0.7.0
+Using actioncable 5.2.1
+Using globalid 0.4.1
+Using activejob 5.2.1
+Using mini_mime 1.0.1
+Using mail 2.7.1
+Using actionmailer 5.2.1
+Using activemodel 5.2.1
+Using arel 9.0.0
+Using activerecord 5.2.1
+Using mimemagic 0.3.2
+Using marcel 0.3.3
+Using activestorage 5.2.1
+Using public_suffix 3.0.3
+Using addressable 2.5.2
+Using io-like 0.3.0
+Using archive-zip 0.11.0
+Using bindex 0.5.0
+Using msgpack 1.2.4
+Using bootsnap 1.3.2
+Using bundler 1.17.1
+Using byebug 10.0.2
+Using regexp_parser 1.2.0
+Using xpath 3.2.0
+Using capybara 3.10.1
+Using ffi 1.9.25
+Using childprocess 0.9.0
+Using chromedriver-helper 2.1.0
+Using coffee-script-source 1.12.2
+Using execjs 2.7.0
+Using coffee-script 2.4.1
+Using method_source 0.9.2
+Using thor 0.20.3
+Using railties 5.2.1
+Using coffee-rails 4.2.2
+Using multi_json 1.13.1
+Using jbuilder 2.8.0
+Using rb-fsevent 0.10.3
+Using rb-inotify 0.9.10
+Using ruby_dep 1.5.0
+Using listen 3.1.5
+Using puma 3.12.0
+Using sprockets 3.7.2
+Using sprockets-rails 3.2.1
+Using rails 5.2.1
+Using rubyzip 1.2.2
+Using sass-listen 4.0.0
+Using sass 3.7.2
+Using tilt 2.0.8
+Using sass-rails 5.0.7
+Using selenium-webdriver 3.141.0
+Using spring 2.0.2
+Using spring-watcher-listen 2.0.1
+Using sqlite3 1.3.13
+Using turbolinks-source 5.2.0
+Using turbolinks 5.2.0
+Using uglifier 4.1.19
+Using web-console 3.7.0
+Bundle complete! 18 Gemfile dependencies, 79 gems now installed.
+Gems in the group production were not installed.
+Use `bundle info [gemname]` to see where a bundled gem is installed.
+         run  bundle exec spring binstub --all
+* bin/rake: spring inserted
+* bin/rails: spring inserted
+Nicholass-MacBook-Pro:odin_on_rails nicholasbarker$ cd my_first_rails_app
+Nicholass-MacBook-Pro:my_first_rails_app nicholasbarker$ rails generate scaffold car make:string model:string year:integer
+Running via Spring preloader in process 44687
+      invoke  active_record
+      create    db/migrate/20181112111613_create_cars.rb
+      create    app/models/car.rb
+      invoke    test_unit
+      create      test/models/car_test.rb
+      create      test/fixtures/cars.yml
+      invoke  resource_route
+       route    resources :cars
+      invoke  scaffold_controller
+      create    app/controllers/cars_controller.rb
+      invoke    erb
+      create      app/views/cars
+      create      app/views/cars/index.html.erb
+      create      app/views/cars/edit.html.erb
+      create      app/views/cars/show.html.erb
+      create      app/views/cars/new.html.erb
+      create      app/views/cars/_form.html.erb
+      invoke    test_unit
+      create      test/controllers/cars_controller_test.rb
+      create      test/system/cars_test.rb
+      invoke    helper
+      create      app/helpers/cars_helper.rb
+      invoke      test_unit
+      invoke    jbuilder
+      create      app/views/cars/index.json.jbuilder
+      create      app/views/cars/show.json.jbuilder
+      create      app/views/cars/_car.json.jbuilder
+      invoke  assets
+      invoke    coffee
+      create      app/assets/javascripts/cars.coffee
+      invoke    scss
+      create      app/assets/stylesheets/cars.scss
+      invoke  scss
+      create    app/assets/stylesheets/scaffolds.scss
+Nicholass-MacBook-Pro:my_first_rails_app nicholasbarker$ rails db:migrate
+== 20181112111613 CreateCars: migrating =======================================
+-- create_table(:cars)
+   -> 0.0009s
+== 20181112111613 CreateCars: migrated (0.0009s) ==============================
+
+Nicholass-MacBook-Pro:my_first_rails_app nicholasbarker$ rails server
+=> Booting Puma
+=> Rails 5.2.1 application starting in development 
+=> Run `rails server -h` for more startup options
+Puma starting in single mode...
+* Version 3.12.0 (ruby 2.5.3-p105), codename: Llamas in Pajamas
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://0.0.0.0:3000
+Use Ctrl-C to stop
+^C- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2018-11-12 11:17:02 +0000 ===
+- Goodbye!
+Exiting
+Nicholass-MacBook-Pro:my_first_rails_app nicholasbarker$ my_first_rails_app
+-bash: my_first_rails_app: command not found
+Nicholass-MacBook-Pro:my_first_rails_app nicholasbarker$ pwd
+/Users/nicholasbarker/odin_on_rails/my_first_rails_app
+Nicholass-MacBook-Pro:my_first_rails_app nicholasbarker$ $ pwd
+-bash: $: command not found
+Nicholass-MacBook-Pro:my_first_rails_app nicholasbarker$ /home/you/odin_on_rails/my_first_rails_app
+-bash: /home/you/odin_on_rails/my_first_rails_app: No such file or directory
+Nicholass-MacBook-Pro:my_first_rails_app nicholasbarker$ /home/you/odin_on_rails/my_first_rails_app
+-bash: /home/you/odin_on_rails/my_first_rails_app: No such file or directory
+Nicholass-MacBook-Pro:my_first_rails_app nicholasbarker$ git init
+Reinitialized existing Git repository in /Users/nicholasbarker/odin_on_rails/my_first_rails_app/.git/
+Nicholass-MacBook-Pro:my_first_rails_app nicholasbarker$ git add .
+Nicholass-MacBook-Pro:my_first_rails_app nicholasbarker$ git commit -m "initial commit"
+[master (root-commit) b5a683b] initial commit
+ 100 files changed, 1675 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 .ruby-version
+ create mode 100644 Gemfile
+ create mode 100644 Gemfile.lock
+ create mode 100644 README.md
+ create mode 100644 Rakefile
+ create mode 100644 app/assets/config/manifest.js
+ create mode 100644 app/assets/images/.keep
+ create mode 100644 app/assets/javascripts/application.js
+ create mode 100644 app/assets/javascripts/cable.js
+ create mode 100644 app/assets/javascripts/cars.coffee
+ create mode 100644 app/assets/javascripts/channels/.keep
+ create mode 100644 app/assets/stylesheets/application.css
+ create mode 100644 app/assets/stylesheets/cars.scss
+ create mode 100644 app/assets/stylesheets/scaffolds.scss
+ create mode 100644 app/channels/application_cable/channel.rb
+ create mode 100644 app/channels/application_cable/connection.rb
+ create mode 100644 app/controllers/application_controller.rb
+ create mode 100644 app/controllers/cars_controller.rb
+ create mode 100644 app/controllers/concerns/.keep
+ create mode 100644 app/helpers/application_helper.rb
+ create mode 100644 app/helpers/cars_helper.rb
+ create mode 100644 app/jobs/application_job.rb
+ create mode 100644 app/mailers/application_mailer.rb
+ create mode 100644 app/models/application_record.rb
+ create mode 100644 app/models/car.rb
+ create mode 100644 app/models/concerns/.keep
+ create mode 100644 app/views/cars/_car.json.jbuilder
+ create mode 100644 app/views/cars/_form.html.erb
+ create mode 100644 app/views/cars/edit.html.erb
+ create mode 100644 app/views/cars/index.html.erb
+ create mode 100644 app/views/cars/index.json.jbuilder
+ create mode 100644 app/views/cars/new.html.erb
+ create mode 100644 app/views/cars/show.html.erb
+ create mode 100644 app/views/cars/show.json.jbuilder
+ create mode 100644 app/views/layouts/application.html.erb
+ create mode 100644 app/views/layouts/mailer.html.erb
+ create mode 100644 app/views/layouts/mailer.text.erb
+ create mode 100755 bin/bundle
+ create mode 100755 bin/rails
+ create mode 100755 bin/rake
+ create mode 100755 bin/setup
+ create mode 100755 bin/spring
+ create mode 100755 bin/update
+ create mode 100755 bin/yarn
+ create mode 100644 config.ru
+ create mode 100644 config/application.rb
+ create mode 100644 config/boot.rb
+ create mode 100644 config/cable.yml
+ create mode 100644 config/credentials.yml.enc
+ create mode 100644 config/database.yml
+ create mode 100644 config/environment.rb
+ create mode 100644 config/environments/development.rb
+ create mode 100644 config/environments/production.rb
+ create mode 100644 config/environments/test.rb
+ create mode 100644 config/initializers/application_controller_renderer.rb
+ create mode 100644 config/initializers/assets.rb
+ create mode 100644 config/initializers/backtrace_silencers.rb
+ create mode 100644 config/initializers/content_security_policy.rb
+ create mode 100644 config/initializers/cookies_serializer.rb
+ create mode 100644 config/initializers/filter_parameter_logging.rb
+ create mode 100644 config/initializers/inflections.rb
+ create mode 100644 config/initializers/mime_types.rb
+ create mode 100644 config/initializers/wrap_parameters.rb
+ create mode 100644 config/locales/en.yml
+ create mode 100644 config/puma.rb
+ create mode 100644 config/routes.rb
+ create mode 100644 config/spring.rb
+ create mode 100644 config/storage.yml
+ create mode 100644 db/migrate/20181112111613_create_cars.rb
+ create mode 100644 db/schema.rb
+ create mode 100644 db/seeds.rb
+ create mode 100644 lib/assets/.keep
+ create mode 100644 lib/tasks/.keep
+ create mode 100644 log/.keep
+ create mode 100644 package.json
+ create mode 100644 public/404.html
+ create mode 100644 public/422.html
+ create mode 100644 public/500.html
+ create mode 100644 public/apple-touch-icon-precomposed.png
+ create mode 100644 public/apple-touch-icon.png
+ create mode 100644 public/favicon.ico
+ create mode 100644 public/robots.txt
+ create mode 100644 storage/.keep
+ create mode 100644 test/application_system_test_case.rb
+ create mode 100644 test/controllers/.keep
+ create mode 100644 test/controllers/cars_controller_test.rb
+ create mode 100644 test/fixtures/.keep
+ create mode 100644 test/fixtures/cars.yml
+ create mode 100644 test/fixtures/files/.keep
+ create mode 100644 test/helpers/.keep
+ create mode 100644 test/integration/.keep
+ create mode 100644 test/mailers/.keep
+ create mode 100644 test/models/.keep
+ create mode 100644 test/models/car_test.rb
+ create mode 100644 test/system/.keep
+ create mode 100644 test/system/cars_test.rb
+ create mode 100644 test/test_helper.rb
+ create mode 100644 tmp/.keep
+ create mode 100644 vendor/.keep
+Nicholass-MacBook-Pro:my_first_rails_app nicholasbarker$ git remote add origin https://github.com/knightofnoo/My_First_Rails_App.git
+Nicholass-MacBook-Pro:my_first_rails_app nicholasbarker$ git push -u origin master
+Enumerating objects: 112, done.
+Counting objects: 100% (112/112), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (97/97), done.
+Writing objects: 100% (112/112), 26.66 KiB | 2.96 MiB/s, done.
+Total 112 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), done.
+remote: 
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/knightofnoo/My_First_Rails_App/pull/new/master
+remote: 
+To https://github.com/knightofnoo/My_First_Rails_App.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+Nicholass-MacBook-Pro:my_first_rails_app nicholasbarker$ curl https://cli-assets.heroku.com/install.sh | sh
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  1892  100  1892    0     0   9465      0 --:--:-- --:--:-- --:--:--  9507
+This script requires superuser access.
+You will be prompted for your password by sudo.
+Password:
+Sorry, try again.
+Password:
+Installing CLI from https://cli-assets.heroku.com/heroku-darwin-x64.tar.gz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 21.8M  100 21.8M    0     0  2571k      0  0:00:08  0:00:08 --:--:-- 1879k
+v11.0.0
+heroku installed to /usr/local/bin/heroku
+heroku/7.18.5 darwin-x64 node-v11.0.0
+Nicholass-MacBook-Pro:my_first_rails_app nicholasbarker$ heroku version
+heroku/7.18.5 darwin-x64 node-v11.0.0
+Nicholass-MacBook-Pro:my_first_rails_app nicholasbarker$ heroku keys:add
+Found an SSH public key at /Users/nicholasbarker/.ssh/id_rsa.pub
+? Would you like to upload it to Heroku? Yes
+Uploading /Users/nicholasbarker/.ssh/id_rsa.pub SSH key... done
+Nicholass-MacBook-Pro:my_first_rails_app nicholasbarker$ heroku create
+Creating app... done, ⬢ powerful-dusk-20761
+https://powerful-dusk-20761.herokuapp.com/ | https://git.heroku.com/powerful-dusk-20761.git
+Nicholass-MacBook-Pro:my_first_rails_app nicholasbarker$ ls
+Gemfile		Gemfile.lock	README.md	Rakefile	app		bin		config		config.ru	db		lib		log		package.json	public		storage		test		tmp		vendor
+Nicholass-MacBook-Pro:my_first_rails_app nicholasbarker$ code
+Nicholass-MacBook-Pro:my_first_rails_app nicholasbarker$ bundle install --without production
+The dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.
+Fetching gem metadata from https://rubygems.org/.........
+Fetching gem metadata from https://rubygems.org/.
+Resolving dependencies...
+Using rake 12.3.1
+Using concurrent-ruby 1.1.3
+Using i18n 1.1.1
+Using minitest 5.11.3
+Using thread_safe 0.3.6
+Using tzinfo 1.2.5
+Using activesupport 5.2.1
+Using builder 3.2.3
+Using erubi 1.7.1
+Using mini_portile2 2.3.0
+Using nokogiri 1.8.5
+Using rails-dom-testing 2.0.3
+Using crass 1.0.4
+Using loofah 2.2.3
+Using rails-html-sanitizer 1.0.4
+Using actionview 5.2.1
+Using rack 2.0.6
+Using rack-test 1.1.0
+Using actionpack 5.2.1
+Using nio4r 2.3.1
+Using websocket-extensions 0.1.3
+Using websocket-driver 0.7.0
+Using actioncable 5.2.1
+Using globalid 0.4.1
+Using activejob 5.2.1
+Using mini_mime 1.0.1
+Using mail 2.7.1
+Using actionmailer 5.2.1
+Using activemodel 5.2.1
+Using arel 9.0.0
+Using activerecord 5.2.1
+Using mimemagic 0.3.2
+Using marcel 0.3.3
+Using activestorage 5.2.1
+Using public_suffix 3.0.3
+Using addressable 2.5.2
+Using io-like 0.3.0
+Using archive-zip 0.11.0
+Using bindex 0.5.0
+Using msgpack 1.2.4
+Using bootsnap 1.3.2
+Using bundler 1.17.1
+Using byebug 10.0.2
+Using regexp_parser 1.2.0
+Using xpath 3.2.0
+Using capybara 3.10.1
+Using ffi 1.9.25
+Using childprocess 0.9.0
+Using chromedriver-helper 2.1.0
+Using coffee-script-source 1.12.2
+Using execjs 2.7.0
+Using coffee-script 2.4.1
+Using method_source 0.9.2
+Using thor 0.20.3
+Using railties 5.2.1
+Using coffee-rails 4.2.2
+Using multi_json 1.13.1
+Using jbuilder 2.8.0
+Using rb-fsevent 0.10.3
+Using rb-inotify 0.9.10
+Using ruby_dep 1.5.0
+Using listen 3.1.5
+Using puma 3.12.0
+Using sprockets 3.7.2
+Using sprockets-rails 3.2.1
+Using rails 5.2.1
+Using rubyzip 1.2.2
+Using sass-listen 4.0.0
+Using sass 3.7.2
+Using tilt 2.0.8
+Using sass-rails 5.0.7
+Using selenium-webdriver 3.141.0
+Using spring 2.0.2
+Using spring-watcher-listen 2.0.1
+Using sqlite3 1.3.13
+Using turbolinks-source 5.2.0
+Using turbolinks 5.2.0
+Using uglifier 4.1.19
+Using web-console 3.7.0
+Bundle complete! 19 Gemfile dependencies, 79 gems now installed.
+Gems in the group production were not installed.
+Use `bundle info [gemname]` to see where a bundled gem is installed.
+Nicholass-MacBook-Pro:my_first_rails_app nicholasbarker$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   Gemfile
+	modified:   Gemfile.lock
+	modified:   config/routes.rb
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Nicholass-MacBook-Pro:my_first_rails_app nicholasbarker$ git add .
+Nicholass-MacBook-Pro:my_first_rails_app nicholasbarker$ git commit -m 'updates for heroku deployment'
+[master 7b15a6c] updates for heroku deployment
+ 3 files changed, 11 insertions(+), 3 deletions(-)
+Nicholass-MacBook-Pro:my_first_rails_app nicholasbarker$ git push origin master
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 630 bytes | 630.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0)
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To https://github.com/knightofnoo/My_First_Rails_App.git
+   b5a683b..7b15a6c  master -> master
+Nicholass-MacBook-Pro:my_first_rails_app nicholasbarker$ git push heroku master
+Enumerating objects: 118, done.
+Counting objects: 100% (118/118), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (103/103), done.
+Writing objects: 100% (118/118), 27.15 KiB | 2.47 MiB/s, done.
+Total 118 (delta 6), reused 0 (delta 0)
+remote: Compressing source files... done.
+remote: Building source:
+remote: 
+remote:  !     Warning: Multiple default buildpacks reported the ability to handle this app. The first buildpack in the list below will be used.
+remote: 			Detected buildpacks: Ruby,Node.js
+remote: 			See https://devcenter.heroku.com/articles/buildpacks#buildpack-detect-order
+remote: -----> Ruby app detected
+remote: -----> Compiling Ruby/Rails
+remote: -----> Using Ruby version: ruby-2.5.3
+remote: -----> Installing dependencies using bundler 1.15.2
+remote:        Running: bundle install --without development:test --path vendor/bundle --binstubs vendor/bundle/bin -j4 --deployment
+remote:        Warning: the running version of Bundler (1.15.2) is older than the version that created the lockfile (1.17.1). We suggest you upgrade to the latest version of Bundler by running `gem install bundler`.
+remote:        Fetching gem metadata from https://rubygems.org/.........
+remote:        Fetching version metadata from https://rubygems.org/..
+remote:        Fetching dependency metadata from https://rubygems.org/.
+remote:        Fetching rake 12.3.1
+remote:        Fetching concurrent-ruby 1.1.3
+remote:        Fetching minitest 5.11.3
+remote:        Installing rake 12.3.1
+remote:        Installing minitest 5.11.3
+remote:        Installing concurrent-ruby 1.1.3
+remote:        Fetching thread_safe 0.3.6
+remote:        Installing thread_safe 0.3.6
+remote:        Fetching builder 3.2.3
+remote:        Installing builder 3.2.3
+remote:        Fetching erubi 1.7.1
+remote:        Installing erubi 1.7.1
+remote:        Fetching mini_portile2 2.3.0
+remote:        Installing mini_portile2 2.3.0
+remote:        Fetching crass 1.0.4
+remote:        Installing crass 1.0.4
+remote:        Fetching rack 2.0.6
+remote:        Installing rack 2.0.6
+remote:        Fetching nio4r 2.3.1
+remote:        Installing nio4r 2.3.1 with native extensions
+remote:        Fetching websocket-extensions 0.1.3
+remote:        Installing websocket-extensions 0.1.3
+remote:        Fetching mini_mime 1.0.1
+remote:        Installing mini_mime 1.0.1
+remote:        Fetching arel 9.0.0
+remote:        Installing arel 9.0.0
+remote:        Fetching mimemagic 0.3.2
+remote:        Fetching msgpack 1.2.4
+remote:        Installing mimemagic 0.3.2
+remote:        Installing msgpack 1.2.4 with native extensions
+remote:        Using bundler 1.15.2
+remote:        Fetching coffee-script-source 1.12.2
+remote:        Installing coffee-script-source 1.12.2
+remote:        Fetching execjs 2.7.0
+remote:        Installing execjs 2.7.0
+remote:        Fetching method_source 0.9.2
+remote:        Installing method_source 0.9.2
+remote:        Fetching thor 0.20.3
+remote:        Installing thor 0.20.3
+remote:        Fetching ffi 1.9.25
+remote:        Installing ffi 1.9.25 with native extensions
+remote:        Fetching multi_json 1.13.1
+remote:        Installing multi_json 1.13.1
+remote:        Fetching pg 1.1.3
+remote:        Installing pg 1.1.3 with native extensions
+remote:        Fetching puma 3.12.0
+remote:        Installing puma 3.12.0 with native extensions
+remote:        Fetching rb-fsevent 0.10.3
+remote:        Installing rb-fsevent 0.10.3
+remote:        Fetching tilt 2.0.8
+remote:        Installing tilt 2.0.8
+remote:        Fetching turbolinks-source 5.2.0
+remote:        Installing turbolinks-source 5.2.0
+remote:        Fetching tzinfo 1.2.5
+remote:        Installing tzinfo 1.2.5
+remote:        Fetching nokogiri 1.8.5
+remote:        Installing nokogiri 1.8.5 with native extensions
+remote:        Fetching i18n 1.1.1
+remote:        Installing i18n 1.1.1
+remote:        Fetching websocket-driver 0.7.0
+remote:        Installing websocket-driver 0.7.0 with native extensions
+remote:        Fetching mail 2.7.1
+remote:        Installing mail 2.7.1
+remote:        Fetching rack-test 1.1.0
+remote:        Installing rack-test 1.1.0
+remote:        Fetching sprockets 3.7.2
+remote:        Installing sprockets 3.7.2
+remote:        Fetching marcel 0.3.3
+remote:        Installing marcel 0.3.3
+remote:        Fetching coffee-script 2.4.1
+remote:        Installing coffee-script 2.4.1
+remote:        Fetching uglifier 4.1.19
+remote:        Installing uglifier 4.1.19
+remote:        Fetching bootsnap 1.3.2
+remote:        Installing bootsnap 1.3.2 with native extensions
+remote:        Fetching rb-inotify 0.9.10
+remote:        Installing rb-inotify 0.9.10
+remote:        Fetching turbolinks 5.2.0
+remote:        Installing turbolinks 5.2.0
+remote:        Fetching activesupport 5.2.1
+remote:        Installing activesupport 5.2.1
+remote:        Fetching loofah 2.2.3
+remote:        Fetching sass-listen 4.0.0
+remote:        Installing sass-listen 4.0.0
+remote:        Installing loofah 2.2.3
+remote:        Fetching rails-dom-testing 2.0.3
+remote:        Installing rails-dom-testing 2.0.3
+remote:        Fetching globalid 0.4.1
+remote:        Installing globalid 0.4.1
+remote:        Fetching activemodel 5.2.1
+remote:        Installing activemodel 5.2.1
+remote:        Fetching jbuilder 2.8.0
+remote:        Installing jbuilder 2.8.0
+remote:        Fetching sass 3.7.2
+remote:        Fetching rails-html-sanitizer 1.0.4
+remote:        Installing sass 3.7.2
+remote:        Installing rails-html-sanitizer 1.0.4
+remote:        Fetching activejob 5.2.1
+remote:        Installing activejob 5.2.1
+remote:        Fetching activerecord 5.2.1
+remote:        Fetching actionview 5.2.1
+remote:        Installing actionview 5.2.1
+remote:        Installing activerecord 5.2.1
+remote:        Fetching actionpack 5.2.1
+remote:        Installing actionpack 5.2.1
+remote:        Fetching actioncable 5.2.1
+remote:        Fetching actionmailer 5.2.1
+remote:        Installing actioncable 5.2.1
+remote:        Installing actionmailer 5.2.1
+remote:        Fetching railties 5.2.1
+remote:        Installing railties 5.2.1
+remote:        Fetching sprockets-rails 3.2.1
+remote:        Installing sprockets-rails 3.2.1
+remote:        Fetching activestorage 5.2.1
+remote:        Installing activestorage 5.2.1
+remote:        Fetching coffee-rails 4.2.2
+remote:        Fetching rails 5.2.1
+remote:        Fetching sass-rails 5.0.7
+remote:        Installing coffee-rails 4.2.2
+remote:        Installing rails 5.2.1
+remote:        Installing sass-rails 5.0.7
+remote:        Bundle complete! 19 Gemfile dependencies, 61 gems now installed.
+remote:        Gems in the groups development and test were not installed.
+remote:        Bundled gems are installed into ./vendor/bundle.
+remote:        Post-install message from sass:
+remote:        
+remote:        Ruby Sass is deprecated and will be unmaintained as of 26 March 2019.
+remote:        
+remote:        * If you use Sass as a command-line tool, we recommend using Dart Sass, the new
+remote:          primary implementation: https://sass-lang.com/install
+remote:        
+remote:        * If you use Sass as a plug-in for a Ruby web framework, we recommend using the
+remote:          sassc gem: https://github.com/sass/sassc-ruby#readme
+remote:        
+remote:        * For more details, please refer to the Sass blog:
+remote:          http://sass.logdown.com/posts/7081811
+remote:        
+remote:        Bundle completed (45.74s)
+remote:        Cleaning up the bundler cache.
+remote:        Warning: the running version of Bundler (1.15.2) is older than the version that created the lockfile (1.17.1). We suggest you upgrade to the latest version of Bundler by running `gem install bundler`.
+remote:        The latest bundler is 2.0.0.pre.1, but you are currently running 1.15.2.
+remote:        To update, run `gem install bundler --pre`
+remote: -----> Installing node-v8.10.0-linux-x64
+remote: -----> Detecting rake tasks
+remote: -----> Preparing app for Rails asset pipeline
+remote:        Running: rake assets:precompile
+remote:        Yarn executable was not detected in the system.
+remote:        Download Yarn at https://yarnpkg.com/en/docs/install
+remote:        I, [2018-11-12T11:27:22.366897 #1413]  INFO -- : Writing /tmp/build_2605ea5a02722a50d3b54768278b03f6/public/assets/application-19f7aded4e7e773e7aaded6553cd10f08d882d38782ae6c1ab7bd9d20d8bd39b.js
+remote:        I, [2018-11-12T11:27:22.367550 #1413]  INFO -- : Writing /tmp/build_2605ea5a02722a50d3b54768278b03f6/public/assets/application-19f7aded4e7e773e7aaded6553cd10f08d882d38782ae6c1ab7bd9d20d8bd39b.js.gz
+remote:        I, [2018-11-12T11:27:22.403687 #1413]  INFO -- : Writing /tmp/build_2605ea5a02722a50d3b54768278b03f6/public/assets/application-35729bfbaf9967f119234595ed222f7ab14859f304ab0acc5451afb387f637fa.css
+remote:        I, [2018-11-12T11:27:22.403976 #1413]  INFO -- : Writing /tmp/build_2605ea5a02722a50d3b54768278b03f6/public/assets/application-35729bfbaf9967f119234595ed222f7ab14859f304ab0acc5451afb387f637fa.css.gz
+remote:        Asset precompilation completed (3.52s)
+remote:        Cleaning assets
+remote:        Running: rake assets:clean
+remote: -----> Detecting rails configuration
+remote: 
+remote: ###### WARNING:
+remote: 
+remote:        Detecting rails configuration failed
+remote:        set HEROKU_DEBUG_RAILS_RUNNER=1 to debug
+remote: 
+remote: ###### WARNING:
+remote: 
+remote:        We detected that some binary dependencies required to
+remote:        use all the preview features of Active Storage are not
+remote:        present on this system.
+remote:        
+remote:        For more information please see:
+remote:          https://devcenter.heroku.com/articles/active-storage-on-heroku
+remote:        
+remote: 
+remote: ###### WARNING:
+remote: 
+remote:        No Procfile detected, using the default web server.
+remote:        We recommend explicitly declaring how to boot your server process via a Procfile.
+remote:        https://devcenter.heroku.com/articles/ruby-default-web-server
+remote: 
+remote: 
+remote: -----> Discovering process types
+remote:        Procfile declares types     -> (none)
+remote:        Default types for buildpack -> console, rake, web
+remote: 
+remote: -----> Compressing...
+remote:        Done: 47.4M
+remote: -----> Launching...
+remote:        Released v6
+remote:        https://powerful-dusk-20761.herokuapp.com/ deployed to Heroku
+remote: 
+remote: Verifying deploy... done.
+To https://git.heroku.com/powerful-dusk-20761.git
+ * [new branch]      master -> master
+Nicholass-MacBook-Pro:my_first_rails_app nicholasbarker$ heroku run rials db:migrate
+Running rials db:migrate on ⬢ powerful-dusk-20761... up, run.5934 (Free)
+bash: rials: command not found
+Nicholass-MacBook-Pro:my_first_rails_app nicholasbarker$ heroku open 
+Nicholass-MacBook-Pro:my_first_rails_app nicholasbarker$ heroku open
+Nicholass-MacBook-Pro:my_first_rails_app nicholasbarker$ HEROKU_DEBUG_RAILS_RUNNER=1
+Nicholass-MacBook-Pro:my_first_rails_app nicholasbarker$ HEROKU_DEBUG_RAILS_RUNNER
+-bash: HEROKU_DEBUG_RAILS_RUNNER: command not found
+Nicholass-MacBook-Pro:my_first_rails_app nicholasbarker$ gem install builder
+Successfully installed builder-3.2.3
+Parsing documentation for builder-3.2.3
+Done installing documentation for builder after 0 seconds
+1 gem installed
+Nicholass-MacBook-Pro:my_first_rails_app nicholasbarker$ git push heroku master
+Everything up-to-date
+Nicholass-MacBook-Pro:my_first_rails_app nicholasbarker$ heroku run rails db:migrate
+Running rails db:migrate on ⬢ powerful-dusk-20761... up, run.8350 (Free)
+D, [2018-11-12T12:32:27.228152 #4] DEBUG -- :    (78.5ms)  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)
+D, [2018-11-12T12:32:27.245890 #4] DEBUG -- :    (14.1ms)  CREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)
+D, [2018-11-12T12:32:27.249173 #4] DEBUG -- :    (1.5ms)  SELECT pg_try_advisory_lock(6555053658110821710)
+D, [2018-11-12T12:32:27.281404 #4] DEBUG -- :    (2.4ms)  SELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC
+I, [2018-11-12T12:32:27.282963 #4]  INFO -- : Migrating to CreateCars (20181112111613)
+D, [2018-11-12T12:32:27.287523 #4] DEBUG -- :    (1.2ms)  BEGIN
+== 20181112111613 CreateCars: migrating =======================================
+-- create_table(:cars)
+D, [2018-11-12T12:32:27.304270 #4] DEBUG -- :    (16.1ms)  CREATE TABLE "cars" ("id" bigserial primary key, "make" character varying, "model" character varying, "year" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)
+   -> 0.0167s
+== 20181112111613 CreateCars: migrated (0.0168s) ==============================
+
+D, [2018-11-12T12:32:27.310669 #4] DEBUG -- :   ActiveRecord::SchemaMigration Create (1.6ms)  INSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"  [["version", "20181112111613"]]
+D, [2018-11-12T12:32:27.323035 #4] DEBUG -- :    (11.9ms)  COMMIT
+D, [2018-11-12T12:32:27.332172 #4] DEBUG -- :   ActiveRecord::InternalMetadata Load (1.5ms)  SELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2  [["key", "environment"], ["LIMIT", 1]]
+D, [2018-11-12T12:32:27.342198 #4] DEBUG -- :    (1.2ms)  BEGIN
+D, [2018-11-12T12:32:27.344414 #4] DEBUG -- :   ActiveRecord::InternalMetadata Create (1.5ms)  INSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"  [["key", "environment"], ["value", "production"], ["created_at", "2018-11-12 12:32:27.342446"], ["updated_at", "2018-11-12 12:32:27.342446"]]
+D, [2018-11-12T12:32:27.349717 #4] DEBUG -- :    (5.1ms)  COMMIT
+D, [2018-11-12T12:32:27.351190 #4] DEBUG -- :    (1.3ms)  SELECT pg_advisory_unlock(6555053658110821710)
+Nicholass-MacBook-Pro:my_first_rails_app nicholasbarker$ heroku open
+Nicholass-MacBook-Pro:my_first_rails_app nicholasbarker$ 
